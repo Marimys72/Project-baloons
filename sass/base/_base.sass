@@ -1,0 +1,33 @@
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+/*Задаем font-size: 10px и переводим в проценты. Так как начальное значение в браузере всегда 16px, то (10/16)*100 и получим 62,5*/
+
+html
+    font-size: 62.5%
+    @include respond(tab-land)
+        font-size: 56.25%
+    @include respond(tab-port)
+        font-size: 50%
+    @include respond(phone)
+        font-size: 30%
+    @include respond(big-screen)
+        font-size: 75%
+
+body
+    font-family: "Roboto", sans-serif
+    font-weight: 400
+    color: $color-gray
+    font-size: 1.6rem
+    letter-spacing: .2rem
+    padding: 5rem
+    background-color: $color-white
+
+.container
+    background-color: #F7F7F7
+    position: relative
+    z-index: 0
+
+
